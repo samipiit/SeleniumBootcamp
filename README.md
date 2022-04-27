@@ -18,11 +18,11 @@
 
 ## TODO:
 - Each team is responsible for developing 150 test cases per member
-- At least 10 different web applications should be tested (15 test cases/ea)
-  - You are welcome to automate all given applications
-  - You must test in all 7 available domains (see below)
-  - You must develop at least 10 End-to-End test cases for automationpractice.com
-    - Take a poke around the account page, checkout page, shopping cart page, etc and try to think of some common production scenarios 
+- At least 10 different web applications should be tested
+  - You are welcome to automate all given applications, in order to reduce the number of tests written, per application.
+- You must test in all 7 available domains (see below)
+- You must develop at least 10 End-to-End test cases for automationpractice.com
+  - Take a poke around the account page, checkout page, shopping cart page, etc and try to think of some common production scenarios 
 - All teams will be accountable for the entirety of deliverables (test cases) for all active team members
 
 ## REQUIREMENTS:
