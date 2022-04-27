@@ -1,30 +1,31 @@
-## 2022 Winter Weekend | Selenium Bootcamp
+# 2022 Winter Weekend | Selenium Bootcamp
 
 
-### SUBMISSION PROCESS:
+## SUBMISSION PROCESS:
 - Deadline: May 15th @ 10AM
-- One person from your team should clone the project locally
+### PRIORITY 1
+- One person from your team should do the following: 
+  - Clone the project locally
   - Create your team's remote repo on Github
-  - Add the repo URL [here, in the ](https://docs.google.com/spreadsheets/d/1KLyA8MVIOBkZ72z8b5jLUwgXkMTqw-EgJcm8C2CufaA/edit#gid=0),
+  - Add the repo URL [here, in your team's sheet](https://docs.google.com/spreadsheets/d/1KLyA8MVIOBkZ72z8b5jLUwgXkMTqw-EgJcm8C2CufaA/edit#gid=0),
   - Switch your local repo to point to your team's new remote repo
     - `git remote set-url <existing remote name> <new repo URL>`
   - Push the framework to your team's remote repo
-  - All members should then clone, create a branch and push to their individual branches, so that everyone has the baseline framework up and running. 
-    - This should be priority number 1
+- All members should now clone the repo, create their own branch and push at least once to their individual branches, so that everyone starts with the same baseline framework in their respective branches 
 - You should be pushing **STABLE CODE ONLY** & you should be pushing as soon as you can confirm a test case is passing consistently (run test 3-4x to confirm)
   - Best practice (in real life), is to push your code every time you solve a problem, make a change, or finish a task.
   - ***IMPORTANT: DO NOT PUSH ANY CODE CONTAINING ANY ERRORS, OR ANY INCOMPLETE CODE***
 
-### TODO:
+## TODO:
 - Each team is responsible for developing 150 test cases per member
-- At least 10 different web applications should be tested (15 test cases/ea)
-  - You are welcome to automate all given applications
-  - You must test in all 7 available domains (see below)
-  - You must develop at least 10 End-to-End test cases for automationpractice.com
-    - Take a poke around the account page, checkout page, shopping cart page, etc and try to think of some common production scenarios 
+- At least 10 different web applications should be tested
+  - You are welcome to automate all given applications, in order to reduce the number of tests written, per application.
+- You must test in all 7 available domains (see below)
+- You must develop at least 10 End-to-End test cases for automationpractice.com
+  - Take a poke around the account page, checkout page, shopping cart page, etc and try to think of some common production scenarios 
 - All teams will be accountable for the entirety of deliverables (test cases) for all active team members
 
-### REQUIREMENTS:
+## REQUIREMENTS:
 - Explicit Wait
 - Fluent Wait
 - Mouse Hover
@@ -46,7 +47,7 @@
   - Excel
   - Database
   
-### DOMAINS:
+## DOMAINS:
 - Digital Media
   - https://www.espn.com/
   - https://www.marketwatch.com/
