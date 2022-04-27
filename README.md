@@ -7,7 +7,7 @@
 - One person from your team should do the following: 
   - Clone the project locally
   - Create your team's remote repo on Github
-  - Add the repo URL [here, in ](https://docs.google.com/spreadsheets/d/1KLyA8MVIOBkZ72z8b5jLUwgXkMTqw-EgJcm8C2CufaA/edit#gid=0),
+  - Add the repo URL [here, in your team's sheet](https://docs.google.com/spreadsheets/d/1KLyA8MVIOBkZ72z8b5jLUwgXkMTqw-EgJcm8C2CufaA/edit#gid=0),
   - Switch your local repo to point to your team's new remote repo
     - `git remote set-url <existing remote name> <new repo URL>`
   - Push the framework to your team's remote repo
