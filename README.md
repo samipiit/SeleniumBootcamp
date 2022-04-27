@@ -1,9 +1,9 @@
 # 2022 Winter Weekend | Selenium Bootcamp
 
 
-### SUBMISSION PROCESS:
+## SUBMISSION PROCESS:
 - Deadline: May 15th @ 10AM
-## PRIORITY 1
+### PRIORITY 1
 - One person from your team should do the following: 
   - Clone the project locally
   - Create your team's remote repo on Github
@@ -16,7 +16,7 @@
   - Best practice (in real life), is to push your code every time you solve a problem, make a change, or finish a task.
   - ***IMPORTANT: DO NOT PUSH ANY CODE CONTAINING ANY ERRORS, OR ANY INCOMPLETE CODE***
 
-### TODO:
+## TODO:
 - Each team is responsible for developing 150 test cases per member
 - At least 10 different web applications should be tested (15 test cases/ea)
   - You are welcome to automate all given applications
@@ -25,7 +25,7 @@
     - Take a poke around the account page, checkout page, shopping cart page, etc and try to think of some common production scenarios 
 - All teams will be accountable for the entirety of deliverables (test cases) for all active team members
 
-### REQUIREMENTS:
+## REQUIREMENTS:
 - Explicit Wait
 - Fluent Wait
 - Mouse Hover
@@ -47,7 +47,7 @@
   - Excel
   - Database
   
-### DOMAINS:
+## DOMAINS:
 - Digital Media
   - https://www.espn.com/
   - https://www.marketwatch.com/
