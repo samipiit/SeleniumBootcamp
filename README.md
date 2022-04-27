@@ -25,56 +25,64 @@
 - All teams will be accountable for the entirety of deliverables (test cases) for all active team members
 
 ### REQUIREMENTS:
--Explicit Wait
--Fluent Wait
--Mouse Hover
--Drag and Drop
--Dropdown Select
--Radio Buttons
--Checkbox Select
--Static & Dynamic Web Tables
--Date Picker/Calendar Picker
--Modal Windows
--Alert Dismissal
--Tab Switching
--iFrames
--Testing Embedded Media Players
--File Upload/Download
--Exception Handling
--Data Provider
--Assertions using external data
-  -Excel
-  -Database
+- Explicit Wait
+- Fluent Wait
+- Mouse Hover
+- Drag and Drop
+- Dropdown Select
+- Radio Buttons
+- Checkbox Select
+- Static & Dynamic Web Tables
+- Date Picker/Calendar Picker
+- Modal Windows
+- Alert Dismissal
+- Tab Switching
+- iFrames
+- Testing Embedded Media Players
+- File Upload/Download
+- Exception Handling
+- Data Provider
+- Assertions using external data
+  - Excel
+  - Database
   
 ### DOMAINS:
--Digital Media
-  -https://www.espn.com/
-  -https://www.marketwatch.com/
+- Digital Media
+  - https://www.espn.com/
+  - https://www.marketwatch.com/
 
--Banking/Finance
-  -https://www.bankofamerica.com/
-  -https://www.sofi.com/
+- Banking/Finance
+  - https://www.bankofamerica.com/
+  - https://www.sofi.com/
 
--Travel
-  -https://www.booking.com/
-  -https://www.expedia.com/
+- Travel
+  - https://www.booking.com/
+  - https://www.expedia.com/
 
--Telecommunications
-  -https://www.verizon.com/
-  -https://www.att.com/
+- Telecommunications
+  - https://www.verizon.com/
+  - https://www.att.com/
 
--Automotive
-  -https://www.bmwusa.com/
-  -https://www.mbusa.com/
+- Automotive
+  - https://www.bmwusa.com/
+  - https://www.mbusa.com/
 
--Real Estate
-  -https://www.redfin.com/
-  -https://www.realtor.com/
+- Real Estate
+  - https://www.redfin.com/
+  - https://www.realtor.com/
 
--E-Commerce
-  -http://automationpractice.com/
-  -https://www.ebay.com/
+- E-Commerce
+  - http://automationpractice.com/
+  - https://www.ebay.com/
 
+
+## REMINDERS:
+- **DO NOT MESS WITH ANY POM.XML FILE, UNLESS YOU TRULY UNDERSTAND WHAT YOU ARE DOING**
+- When running tests from a Test Class, you need to make sure the method in the BasePage class, named `driverSetup` (@BeforeMethod), has an optional parameter `URL`, with the value of the website you are testing. If running tests from the xml file, then the `URL` parameter should point to the application homepage
+- If you are copying and pasting code, it probably means you should make that workflow/action/whatever into a method
+- Try to come up with helper methods that can help with assertions (i.e. - compare list of expected results from your excel sheet against a list of webelement text that was retrieved during test execution, and return true if both are equal)
+- At the end of the bootcamp, you should be able to confidently run your entire project (all modules), by executing `mvn clean install -U`
+  - You must have the path to the Maven executable in your `PATH` environment variable, in order to run `mvn` commands in your terminal/cmd
 
 
 
