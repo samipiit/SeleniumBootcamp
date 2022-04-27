@@ -1,9 +1,9 @@
-## 2022 Winter Weekend | Selenium Bootcamp
+# 2022 Winter Weekend | Selenium Bootcamp
 
 
 ### SUBMISSION PROCESS:
 - Deadline: May 15th @ 10AM
-# PRIORITY 1
+## PRIORITY 1
 - One person from your team should do the following: 
   - Clone the project locally
   - Create your team's remote repo on Github
