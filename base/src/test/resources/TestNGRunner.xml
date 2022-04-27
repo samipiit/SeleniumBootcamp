@@ -1,12 +1,12 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 
-<suite name="Expedia" verbose="1" >
+<suite name="Base" verbose="1" >
 
     <listeners>
         <listener class-name="listeners.AnnotationTransformer"/>
     </listeners>
 
     <parameter name="browser" value="chrome"/>
-    <parameter name="url" value="http://expedia.com"/>
+    <parameter name="url" value="http://verizon.com"/>
 
 </suite>
