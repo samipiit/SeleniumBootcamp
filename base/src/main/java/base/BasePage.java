@@ -21,7 +21,6 @@ import org.testng.annotations.*;
 import reporting.ExtentManager;
 import reporting.ExtentTestManager;
 import utils.Database;
-import utils.RetryAnalyzer;
 
 import java.io.File;
 import java.lang.reflect.Method;
