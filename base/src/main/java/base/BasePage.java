@@ -38,7 +38,7 @@ public class BasePage {
     public static WebDriver driver;
     public static WebDriverWait webDriverWait;
     public static WebDriverWait syncWait;
-    public static Wait fluentWait;
+    public static Wait<WebDriver> fluentWait;
     public static ExtentReports extent;
     public static JavascriptExecutor jsDriver;
     public static final String DATA_PATH = System.getProperty("user.dir") + File.separator + "src" + File.separator
@@ -291,7 +291,7 @@ public class BasePage {
         }
 
         webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        fluentWait = new FluentWait(driver)
+        fluentWait = new FluentWait<>(driver)
                 .withTimeout(Duration.ofSeconds(20))
                 .pollingEvery(Duration.ofMillis(500))
                 .ignoring(Exception.class);
