@@ -9,4 +9,10 @@
     <parameter name="browser" value="chrome"/>
     <parameter name="url" value="http://att.com"/>
 
+    <test name="test">
+        <parameter name="driverConfigEnabled" value="false"/>
+        <classes>
+<!--            <class name="TestClass"/>-->
+        </classes>
+    </test>
 </suite>

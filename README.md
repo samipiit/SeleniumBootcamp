@@ -17,12 +17,12 @@
   - ***IMPORTANT: DO NOT PUSH ANY CODE CONTAINING ANY ERRORS, OR ANY INCOMPLETE CODE***
 
 ## TODO:
-- Each team is responsible for developing 150 test cases per member
-- At least 10 different web applications should be tested
-  - You are welcome to automate all given applications, in order to reduce the number of tests written, per application.
-- You must test in all 7 available domains (see below)
+- Each team is responsible for developing 150 test cases/member
+- Each person must work with at least 10 different web applications (15 tests/application)
+  - You are welcome to automate all the given applications, in order to reduce the number of tests you would need to write per application.
+- You must test in all 7 available domains (see below for domain list)
 - You must develop at least 10 End-to-End test cases for automationpractice.com
-  - Take a poke around the account page, checkout page, shopping cart page, etc and try to think of some common production scenarios 
+  - Take a poke around the account page, checkout page, shopping cart page, etc and try to think of some common production scenarios that might occur often 
 - All teams will be accountable for the entirety of deliverables (test cases) for all active team members
 
 ## REQUIREMENTS:
@@ -80,7 +80,15 @@
 ## REMINDERS:
 - **DO NOT MESS WITH ANY POM.XML FILE, UNLESS YOU TRULY UNDERSTAND WHAT YOU ARE DOING**
 - When running tests from a Test Class, you need to make sure the method in the BasePage class, named `driverSetup` (@BeforeMethod), has an optional parameter `URL`, with the value of the website you are testing. If running tests from the xml file, then the `URL` parameter should point to the application homepage
-- If you are copying and pasting code, it probably means you should make that workflow/action/whatever into a method
+- If you would like your test to automatically retry upon failure, annotate the test method with `@RetryCount(2)` with the number passed to the annotation being the number of times you would like your test to retry
+    - If you are running from the Test Class and would like your tests to auto-retry, then you need to add the following attribute & value to the `@Test` annotation: 
+        - `retryAnalyzer = RetryAnalyzer.class`
+    - If you are running from the TestNGRunner.xml, then make sure you have the AnnotationTransfer class identified as a listener. (This has already been done, in all the Runner files)
+        - `<listeners>`
+                `<listener class-name="listeners.AnnotationTransformer"/>`
+           `</listeners>`
+- If you are copying and pasting code frequently, it probably means you should turn that workflow/action/whatever into a method
+- Your goal should be to write code that is highly portable and can be used in a wide variety of situations  
 - Try to come up with helper methods that can help with assertions (i.e. - compare list of expected results from your excel sheet against a list of webelement text that was retrieved during test execution, and return true if both are equal)
 - At the end of the bootcamp, you should be able to confidently run your entire project (all modules), by executing `mvn clean install -U`
   - You must have the path to the Maven executable in your `PATH` environment variable, in order to run `mvn` commands in your terminal/cmd
