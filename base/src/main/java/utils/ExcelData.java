@@ -15,12 +15,17 @@ import java.util.List;
 
 public class ExcelData {
 
+    private final String filePath;
     private XSSFWorkbook workbook = null;
     private Sheet sheet = null;
     private Row row = null;
     private Cell cell = null;
     private FileOutputStream fos = null;
-    private int numberOfRows, numberOfCol, rowNum;
+    private int numberOfRows, numberOfCol;
+
+    public ExcelData(String filePath) {
+        this.filePath = filePath;
+    }
 
     // region Readers
     /**
@@ -28,15 +33,14 @@ public class ExcelData {
      *
      * This function does not read the header row, and starts reading from row 2
      *
-     * @param path Path to file
      * @param sheetName Sheet name to read from
      * @return All populated String cell values
      */
-    public String[][] readStringArrays(String path, String sheetName) {
+    public String[][] readStringArrays(String sheetName) {
         String[][] data;
 
         try {
-            FileInputStream fis = new FileInputStream(path);
+            FileInputStream fis = new FileInputStream(this.filePath);
             workbook = new XSSFWorkbook(fis);
         } catch (IOException e) {
             System.out.println("Unable to load file - Check file path, or if the file actually exists in file path directory");
@@ -66,13 +70,12 @@ public class ExcelData {
      *
      * This function does not read the header row, and starts reading from row 2
      *
-     * @param path Path to file
      * @param sheetName Sheet name to read from
      * @return All populated integer cell values
      */
-    public int[][] readIntegerArrays(String path, String sheetName) {
+    public int[][] readIntegerArrays(String sheetName) {
         int[][] data;
-        File file = new File(path);
+        File file = new File(this.filePath);
 
         try {
             FileInputStream fis = new FileInputStream(file);
@@ -103,13 +106,12 @@ public class ExcelData {
      * Read all cells in the last row (String values only) and return the results as a String Array. This method
      * is most likely to be used when there is only 1 row in the sheet
      *
-     * @param path Path to file
      * @param sheetName Sheet name to read from
      * @return All populated String cells in the last row of the sheet
      */
-    public String[] readStringArray(String path, String sheetName) {
+    public String[] readStringArray(String sheetName) {
         String[] data;
-        File file = new File(path);
+        File file = new File(this.filePath);
 
         try {
             FileInputStream fis = new FileInputStream(file);
@@ -138,13 +140,12 @@ public class ExcelData {
      * Read all cells in the last row (integer values only) and return the results as an integer Array. This method
      * is most likely to be used when there is only 1 row in the sheet
      *
-     * @param path Path to file
      * @param sheetName Sheet name to read from
      * @return All populated cells (integer values only) in the last row of the sheet
      */
-    public int[] readIntegerArray(String path, String sheetName) {
+    public int[] readIntegerArray(String sheetName) {
         int[] data;
-        File file = new File(path);
+        File file = new File(this.filePath);
 
         try {
             FileInputStream fis = new FileInputStream(file);
@@ -172,13 +173,12 @@ public class ExcelData {
      * Read all cells in the last row (String values only) and return the results as a List<String>. This method
      * is most likely to be used when there is only 1 row in the sheet
      *
-     * @param path Path to file
      * @param sheetName Sheet name to read from
      * @return All populated String cells in the last row of the sheet
      */
-    public List<String> readStringList(String path, String sheetName) {
+    public List<String> readStringList(String sheetName) {
         List<String> data;
-        File file = new File(path);
+        File file = new File(this.filePath);
 
         try {
             FileInputStream fis = new FileInputStream(file);
@@ -208,10 +208,9 @@ public class ExcelData {
     /**
      * Writes a multi-dimensional String array to a desired workbook/sheet
      *
-     * @param path Path to file
      * @param sheetName Sheet name to write to
      */
-    public void writeStringArrays(String[][] data, String path, String sheetName) {
+    public void writeStringArrays(String[][] data, String sheetName) {
         workbook = new XSSFWorkbook();
         sheet = workbook.createSheet(sheetName);
 
@@ -225,7 +224,7 @@ public class ExcelData {
         }
 
         try {
-            fos = new FileOutputStream(path);
+            fos = new FileOutputStream(this.filePath);
             workbook.write(fos);
             workbook.close();
         } catch (IOException e) {
@@ -237,10 +236,9 @@ public class ExcelData {
     /**
      * Writes a multi-dimensional integer array to a desired workbook/sheet
      *
-     * @param path Path to file
      * @param sheetName Sheet name to write to
      */
-    public void writeIntegerArrays(int[][] data, String path, String sheetName) {
+    public void writeIntegerArrays(int[][] data, String sheetName) {
         workbook = new XSSFWorkbook();
         sheet = workbook.createSheet(sheetName);
 
@@ -254,7 +252,7 @@ public class ExcelData {
         }
 
         try {
-            fos = new FileOutputStream(path);
+            fos = new FileOutputStream(this.filePath);
             workbook.write(fos);
             workbook.close();
         } catch (IOException e) {

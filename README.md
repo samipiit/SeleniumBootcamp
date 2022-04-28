@@ -87,6 +87,8 @@
         - `<listeners>`
                 `<listener class-name="listeners.AnnotationTransformer"/>`
            `</listeners>`
+- When you run the Maven Clean lifecycle, you will also be cleaning out all existing test reports
+    - In order to keep all your reports, you must go to the ***PARENT/ROOT*** POM.xml and comment out lines 112-117 (The entire `<filesets>` tag)
 - If you are copying and pasting code frequently, it probably means you should turn that workflow/action/whatever into a method
 - Your goal should be to write code that is highly portable and can be used in a wide variety of situations  
 - Try to come up with helper methods that can help with assertions (i.e. - compare list of expected results from your excel sheet against a list of webelement text that was retrieved during test execution, and return true if both are equal)

@@ -111,10 +111,7 @@
                 <configuration>
                     <filesets>
                         <fileset>
-                            <directory>base1</directory>
-                            <includes>
-                                <include>**/*</include>
-                            </includes>
+                            <directory>${basedir}/src/test/reports</directory>
                             <followSymlinks>false</followSymlinks>
                         </fileset>
                     </filesets>

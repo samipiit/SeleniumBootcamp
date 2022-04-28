@@ -21,6 +21,7 @@ import org.testng.annotations.*;
 import reporting.ExtentManager;
 import reporting.ExtentTestManager;
 import utils.Database;
+import utils.ExcelData;
 
 import java.io.File;
 import java.lang.reflect.Method;
@@ -33,6 +34,9 @@ import java.util.Set;
 public class BasePage {
 
     Map<Object, String> dbConfig = BaseConfig.databaseConfig();
+    public static final String DATA_PATH = System.getProperty("user.dir") + File.separator + "src" + File.separator
+            + "test" + File.separator + "resources" + File.separator + "test_data.xlsx";
+    public static ExcelData excel;
     public static Database db;
     public static WebDriver driver;
     public static WebDriverWait webDriverWait;
@@ -40,8 +44,6 @@ public class BasePage {
     public static Wait<WebDriver> fluentWait;
     public static ExtentReports extent;
     public static JavascriptExecutor jsDriver;
-    public static final String DATA_PATH = System.getProperty("user.dir") + File.separator + "src" + File.separator
-            + "test" + File.separator + "resources" + File.separator + "test_data.xlsx";
 
     // region Hooks
     @BeforeSuite(alwaysRun = true)
@@ -67,6 +69,11 @@ public class BasePage {
         String className = dbConfig.get(BaseConfig.DBProperties.DRIVER_CLASS);
 
         db = new Database(host, user, password, className);
+    }
+
+    @BeforeMethod(alwaysRun = true)
+    public void dataInit() {
+        excel = new ExcelData(DATA_PATH);
     }
 
     @Parameters({"driverConfigEnabled", "browser", "url"})
