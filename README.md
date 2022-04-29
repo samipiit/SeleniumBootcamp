@@ -18,6 +18,7 @@
 
 ## TODO:
 - Each team is responsible for developing 150 test cases/member
+  - 90% of your tests should be data-driven (either data-drive your tests or access data to assert against, from an Excel sheet) 
 - Each person must work with at least 10 different web applications (15 tests/application)
   - You are welcome to automate all the given applications, in order to reduce the number of tests you would need to write per application.
 - You must test in all 7 available domains (see below for domain list)
