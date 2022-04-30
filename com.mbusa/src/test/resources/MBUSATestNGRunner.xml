@@ -9,4 +9,8 @@
     <parameter name="browser" value="chrome"/>
     <parameter name="url" value="http://mbusa.com"/>
 
+    <test name="test">
+    </test>
+
+
 </suite>
