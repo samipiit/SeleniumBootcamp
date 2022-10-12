@@ -2,31 +2,37 @@
 
 
 ## SUBMISSION PROCESS:
-- Deadline: May 15th @ 10AM
-### PRIORITY 1
-- One person from your team should do the following: 
-  - Clone the project locally
-  - Create your team's remote repo on Github
-  - Add the repo URL [here, in your team's sheet](https://docs.google.com/spreadsheets/d/1KLyA8MVIOBkZ72z8b5jLUwgXkMTqw-EgJcm8C2CufaA/edit#gid=0),
-  - Switch your local repo to point to your team's new remote repo
-    - `git remote set-url <existing remote name> <new repo URL>`
-  - Push the framework to your team's remote repo
-- All members should now clone the repo, create their own branch and push at least once to their individual branches, so that everyone starts with the same baseline framework in their respective branches 
-- You should be pushing **STABLE CODE ONLY** & you should be pushing as soon as you can confirm a test case is passing consistently (run test 3-4x to confirm)
-  - Best practice (in real life), is to push your code every time you solve a problem, make a change, or finish a task.
+- Deadline: November 19th @ 10AM
+
+### Instructions
+* One person from your team should do the following: 
+  * Clone the project locally
+  * Create your team's remote repo on Github
+  * Add the repo URL [here, in your team's sheet](https://docs.google.com/spreadsheets/d/1KLyA8MVIOBkZ72z8b5jLUwgXkMTqw-EgJcm8C2CufaA/edit#gid=0),
+  * Switch your local repo to point to your team's new remote repo
+    ```sh
+    git remote set-url origin <your_repo_URL>
+    ```
+  * Push the framework to your team's remote repo
+* All members should now clone the repo, create their own branch and push at least once to their individual branches, 
+so that everyone starts with the same baseline framework in their respective branches
+* You should be pushing **STABLE CODE ONLY** & you should be pushing as soon as you can confirm a test case is passing 
+consistently (run test 3-4x to confirm)
+  - Best practice (in real life), is to push your code every time you solve a problem, make a change, or finish a task
   - ***IMPORTANT: DO NOT PUSH ANY CODE CONTAINING ANY ERRORS, OR ANY INCOMPLETE CODE***
-
-## TODO:
-- Each team is responsible for developing 150 test cases/member
-  - 90% of your tests should be data-driven (either data-drive your tests or access data to assert against, from an Excel sheet) 
-- Each person must work with at least 10 different web applications (15 tests/application)
-  - You are welcome to automate all the given applications, in order to reduce the number of tests you would need to write per application.
-- You must test in all 7 available domains (see below for domain list)
-- You must develop at least 10 End-to-End test cases for automationpractice.com
-  - Take a poke around the account page, checkout page, shopping cart page, etc and try to think of some common production scenarios that might occur often 
-- All teams will be accountable for the entirety of deliverables (test cases) for all active team members
-
-## REQUIREMENTS:
+#
+###TO DO:
+* Each team is responsible for developing 150 test cases/member
+  * 90% of your tests should be data-driven
+    * Either data-drive your tests or access data to assert against, from an external source 
+* Each person must work with at least 10 different web applications (15 tests/application)
+  * You are welcome to automate all the given applications, in order to reduce the number of tests required per application
+* You must test in all 7 available domains (see below for domain list)
+* You must develop at least 10 End-to-End test cases for automationpractice.com
+  * Take a poke around the account page, checkout page, shopping cart page, etc and try to think of some common 
+  scenarios that users might encounter often 
+#
+###REQUIREMENTS:
 - Explicit Wait
 - Fluent Wait
 - Mouse Hover
@@ -47,35 +53,35 @@
 - Assertions using external data
   - Excel
   - Database
-  
-## DOMAINS:
+#
+#### DOMAINS:
 - Digital Media
-  - https://www.espn.com/
-  - https://www.marketwatch.com/
+  - [ESPN](https://www.espn.com/)
+  - [Marketwatch](https://www.marketwatch.com/)
 
 - Banking/Finance
-  - https://www.bankofamerica.com/
-  - https://www.sofi.com/
+  - [Bank of America](https://www.bankofamerica.com/)
+  - [Investing.com](https://www.investing.com/)
 
 - Travel
-  - https://www.booking.com/
-  - https://www.expedia.com/
+  - [Booking.com](https://www.booking.com/)
+  - [Expedia](https://www.expedia.com/)
 
 - Telecommunications
-  - https://www.verizon.com/
-  - https://www.att.com/
+  - [Verizon](https://www.verizon.com/)
+  - [Optimum](https://www.optimum.com/)
 
 - Automotive
-  - https://www.bmwusa.com/
-  - https://www.mbusa.com/
+  - [BMW USA](https://www.bmwusa.com/)
+  - [Mercedes-Benz USA](https://www.mbusa.com/)
 
 - Real Estate
-  - https://www.redfin.com/
-  - https://www.realtor.com/
+  - [StreetEasy](https://www.streeteasy.com/)
+  - [Apartments.com](https://www.apartments.com/)
 
 - E-Commerce
-  - http://automationpractice.com/
-  - https://www.ebay.com/
+  - [Automation Practice](http://automationpractice.com/)
+  - [EBay](https://www.ebay.com/)
 
 
 ## REMINDERS:
