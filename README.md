@@ -21,7 +21,7 @@ consistently (run test 3-4x to confirm)
   - Best practice (in real life), is to push your code every time you solve a problem, make a change, or finish a task
   - ***IMPORTANT: DO NOT PUSH ANY CODE CONTAINING ANY ERRORS, OR ANY INCOMPLETE CODE***
 #
-###TO DO:
+### TO DO:
 * Each team is responsible for developing 150 test cases/member
   * 90% of your tests should be data-driven
     * Either data-drive your tests or access data to assert against, from an external source 
@@ -32,7 +32,7 @@ consistently (run test 3-4x to confirm)
   * Take a poke around the account page, checkout page, shopping cart page, etc and try to think of some common 
   scenarios that users might encounter often 
 #
-###REQUIREMENTS:
+### REQUIREMENTS:
 - Explicit Wait
 - Fluent Wait
 - Mouse Hover
