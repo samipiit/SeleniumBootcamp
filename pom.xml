@@ -11,7 +11,7 @@
     <modules>
         <module>base</module>
         <module>com.espn</module>
-        <module>com.marketwatch</module>
+        <module>com.freecrm</module>
         <module>com.bankofamerica</module>
         <module>com.investing</module>
         <module>com.booking</module>

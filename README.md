@@ -20,11 +20,16 @@ git remote set-url origin <your_repo_URL>
 git remote -v
 ```
 * Make sure to push the framework to your remote repo so that you have the base framework available
+* Make sure to do this next step only after you've pushed the framework to your remote
+    * Inside each module except for `base`, under `src/main/java` and `src/main/test` you will find files titled 
+    `delete_this_file.txt` Only delete these files once you have created at least 1 class under these directories. 
+    If you delete this files and there is nothing else in the directory, when you push to your remote, Git will exclude 
+    the directory entirely. 
 * It's recommended to create a new branch for each domain you work on, and then merge that branch into your main once
     you have completed writing tests for that application.
 * You should be pushing **STABLE CODE ONLY** & you should be pushing as soon as you can confirm a test case is passing 
 consistently (run test 3-4x to confirm)
-  - Best practice (in real life), is to push your code every time you solve a problem, make a change, or finish a task
+  - Best practice on the job, is to push your code every time you solve a problem, make a change, or finish a task
   - ***IMPORTANT: DO NOT PUSH ANY CODE CONTAINING ANY ERRORS, OR ANY INCOMPLETE CODE***
 #
 ### TO DO:
@@ -34,10 +39,13 @@ consistently (run test 3-4x to confirm)
 * You must work with at least 10 different web applications (15 tests/application)
   * You are welcome to automate all the given applications, in order to reduce the number of tests required per 
   application
-* You must test in all 7 available domains (see below for domain list)
-* You must develop at least 7 End-to-End test cases for automationpractice.com
-  * Take a poke around the account page, checkout page, shopping cart page, etc and try to think of some common 
-  scenarios that users might often encounter and then replicate that entire user journey programmatically 
+* You must test in all 8 available domains (see below for domain list)
+* You must develop at least 10 high-value test cases for automationpractice.com
+    * Think about common production scenarios, such as registering an account, searching for items,
+    adding items to cart, purchasing items, adding shipping address, viewing order history, etc
+* You must develop at least 10 high value test cases for freecrm.com
+    * Look at all the functionality this application allows you to do - Log a call, add a new contact, add new companies, 
+    scheduling calendar events, etc  
 #
 ### REQUIREMENTS:
 - Explicit Wait
@@ -56,6 +64,7 @@ consistently (run test 3-4x to confirm)
 - Testing Embedded Media Players
 - File Upload/Download
 - Exception Handling
+- Generating Dynamic Fake Data
 - Data Provider
 - Assertions using external data
   - Excel
@@ -64,7 +73,6 @@ consistently (run test 3-4x to confirm)
 #### DOMAINS:
 - Digital Media
   - [ESPN](https://www.espn.com/)
-  - [Marketwatch](https://www.marketwatch.com/)
 
 - Banking/Finance
   - [Bank of America](https://www.bankofamerica.com/)
@@ -90,6 +98,8 @@ consistently (run test 3-4x to confirm)
   - [Automation Practice](http://automationpractice.com/)
   - [EBay](https://www.ebay.com/)
 
+- CRM
+  - [Free CRM](https://freecrm.com/)
 
 ## REMINDERS:
 `**DO NOT MESS WITH ANY POM.XML FILE, UNLESS YOU TRULY UNDERSTAND WHAT YOU ARE DOING**`
