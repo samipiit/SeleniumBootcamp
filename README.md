@@ -2,7 +2,9 @@
 
 
 ## SUBMISSION PROCESS:
-- Deadline: November 19th @ 10AM
+
+###Deadline: 
+* November 19th @ 10AM
 
 ### Instructions 
 * Navigate to your IdeaProjects directory and clone the project locally
