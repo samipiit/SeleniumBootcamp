@@ -3,7 +3,7 @@
 
 ## SUBMISSION PROCESS:
 
-###Deadline: 
+### Deadline: 
 * November 19th @ 10AM
 
 ### Instructions 
