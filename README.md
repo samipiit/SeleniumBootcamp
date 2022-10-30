@@ -25,7 +25,7 @@ git remote -v
 * Make sure to do this next step only after you've pushed the framework to your remote
     * Inside each module except for `base`, under `src/main/java` and `src/main/test` you will find files titled 
     `delete_this_file.txt` Only delete these files once you have created at least 1 class under these directories. 
-    If you delete this files and there is nothing else in the directory, when you push to your remote, Git will exclude 
+    If you delete these files and there is nothing else in the directory, when you push to your remote, Git will exclude 
     the directory entirely. 
 * It's recommended to create a new branch for each domain you work on, and then merge that branch into your main once
     you have completed writing tests for that application.
