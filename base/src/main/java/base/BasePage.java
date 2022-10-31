@@ -30,6 +30,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Map;
 import java.util.Set;
+import java.util.function.Function;
 
 public class BasePage {
 
@@ -44,6 +45,24 @@ public class BasePage {
     public static Wait<WebDriver> fluentWait;
     public static ExtentReports extent;
     public static JavascriptExecutor jsDriver;
+
+    public BasePage() {
+        dataInit();
+        databaseInit();
+    }
+
+    public void databaseInit() {
+        String host = dbConfig.get(BaseConfig.DBProperties.HOST);
+        String user = dbConfig.get(BaseConfig.DBProperties.USER);
+        String password = dbConfig.get(BaseConfig.DBProperties.PASSWORD);
+        String className = dbConfig.get(BaseConfig.DBProperties.DRIVER_CLASS);
+
+        db = new Database(host, user, password, className);
+    }
+
+    public void dataInit() {
+        excel = new ExcelData(DATA_PATH);
+    }
 
     // region Hooks
     @BeforeSuite(alwaysRun = true)
@@ -61,24 +80,9 @@ public class BasePage {
         ExtentTestManager.getTest().assignCategory(className);
     }
 
-    @BeforeMethod(alwaysRun = true)
-    public void databaseInit() {
-        String host = dbConfig.get(BaseConfig.DBProperties.HOST);
-        String user = dbConfig.get(BaseConfig.DBProperties.USER);
-        String password = dbConfig.get(BaseConfig.DBProperties.PASSWORD);
-        String className = dbConfig.get(BaseConfig.DBProperties.DRIVER_CLASS);
-
-        db = new Database(host, user, password, className);
-    }
-
-    @BeforeMethod(alwaysRun = true)
-    public void dataInit() {
-        excel = new ExcelData(DATA_PATH);
-    }
-
     @Parameters({"driverConfigEnabled", "browser", "url"})
     @BeforeMethod
-    public void driverSetup(@Optional("true") String driverConfigEnabled, @Optional("chrome") String browser, @Optional("http://mbusa.com") String url) {
+    public void driverSetup(@Optional("true") String driverConfigEnabled, @Optional("chrome") String browser, @Optional("http://espn.com") String url) {
         if (Boolean.parseBoolean(driverConfigEnabled)) {
             driverInit(browser);
             driver.get(url);
