@@ -43,8 +43,8 @@ consistently (run test 3-4x to confirm)
   application
 * You must test in all 8 available domains (see below for domain list)
 * You must develop at least 10 high-value test cases for ParaBank
-    * Think about common production scenarios, such as registering an account, searching for items,
-    adding items to cart, purchasing items, adding shipping address, viewing order history, etc
+    * Think about common production scenarios, such as opening an account, paying bills,
+    making transfers, viewing transaction history, etc
 * You must develop at least 10 high value test cases for freecrm.com
     * Look at all the functionality this application allows you to do - Log a call, add a new contact, add new companies, 
     scheduling calendar events, etc  
