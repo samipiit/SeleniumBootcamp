@@ -15,7 +15,8 @@ public class ExtentManager {
     public synchronized static ExtentReports getInstance(){
         if(extent == null){
             Date date = new Date();
-            String fileName = "report_" + date.toString().replace(" ", "_").replace(":", "_")+".html";
+//            String fileName = "report_" + date.toString().replace(" ", "_").replace(":", "_")+".html";
+            String fileName = "test_report.html";
             String filePath = System.getProperty("user.dir") + File.separator + "src" + File.separator
                     + "test" + File.separator + "reports" + File.separator + fileName;
 

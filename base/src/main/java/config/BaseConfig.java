@@ -3,6 +3,7 @@ package config;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.sql.Driver;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
@@ -33,6 +34,23 @@ public class BaseConfig {
         return dbConfig;
     }
 
+    public static Map<Object, String> driverConfig() {
+        try {
+            properties = loadProperties();
+        } catch (IOException ioException) {
+            ioException.printStackTrace();
+        }
+
+        Map<Object, String> driverConfig = new HashMap<>();
+
+        if (properties != null) {
+            driverConfig.put(DriverProperties.TIMEOUT_SECONDS, properties.getProperty("driver_timeout_seconds"));
+            driverConfig.put(DriverProperties.POLLING_INTERVAL_MS, properties.getProperty("driver_polling_interval_ms"));
+        }
+
+        return driverConfig;
+    }
+
     private static Properties loadProperties() throws IOException {
         Properties prop = new Properties();
         FileInputStream fis = new FileInputStream(propertiesFile);
@@ -45,6 +63,10 @@ public class BaseConfig {
 
     public enum DBProperties {
         DRIVER_CLASS, HOST, USER, PASSWORD
+    }
+
+    public enum DriverProperties {
+        TIMEOUT_SECONDS, POLLING_INTERVAL_MS
     }
 
 }

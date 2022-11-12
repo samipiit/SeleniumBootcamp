@@ -97,11 +97,11 @@ consistently (run test 3-4x to confirm)
   - [Apartments.com](https://www.apartments.com/)
 
 - E-Commerce
-  - [Automation Practice](http://automationpractice.com/)
   - [EBay](https://www.ebay.com/)
 
-- CRM
+- E2E Capable Applications
   - [Free CRM](https://freecrm.com/)
+  - [ParaBank](https://parabank.parasoft.com/)
 
 ## REMINDERS:
 `**DO NOT MESS WITH ANY POM.XML FILE, UNLESS YOU TRULY UNDERSTAND WHAT YOU ARE DOING**`

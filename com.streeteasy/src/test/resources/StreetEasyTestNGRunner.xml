@@ -9,4 +9,10 @@
     <parameter name="browser" value="chrome"/>
     <parameter name="url" value="http://streeteasy.com"/>
 
+    <test name="test">
+        <classes>
+            <class name="testHomepage.TestHomepage"/>
+        </classes>
+    </test>
+
 </suite>
