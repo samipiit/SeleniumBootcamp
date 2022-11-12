@@ -42,7 +42,7 @@ consistently (run test 3-4x to confirm)
   * You are welcome to automate all the given applications, in order to reduce the number of tests required per 
   application
 * You must test in all 8 available domains (see below for domain list)
-* You must develop at least 10 high-value test cases for automationpractice.com
+* You must develop at least 10 high-value test cases for ParaBank
     * Think about common production scenarios, such as registering an account, searching for items,
     adding items to cart, purchasing items, adding shipping address, viewing order history, etc
 * You must develop at least 10 high value test cases for freecrm.com
