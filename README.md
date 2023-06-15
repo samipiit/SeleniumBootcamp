@@ -27,25 +27,25 @@ git remote -v
     `delete_this_file.txt` Only delete these files once you have created at least 1 class under these directories. 
     If you delete these files and there is nothing else in the directory, when you push to your remote, Git will exclude 
     the directory entirely. 
-* It's recommended to create a new branch for each domain you work on, and then merge that branch into your main once
-    you have completed writing tests for that application.
+* It's recommended to create a new branch for each module you work on, and then merge that branch into your main once
+    you have completed writing tests for that module/application.
 * You should be pushing **STABLE CODE ONLY** & you should be pushing as soon as you can confirm a test case is passing 
-consistently (run test 3-4x to confirm)
+consistently (run test 2-3x to confirm)
   - Best practice on the job, is to push your code every time you solve a problem, make a change, or finish a task
   - ***IMPORTANT: DO NOT PUSH ANY CODE CONTAINING ANY ERRORS, OR ANY INCOMPLETE CODE***
 #
 ### TO DO:
-* You are responsible for developing 150 test cases
+* You are responsible for developing 120 test cases
   * 90% of your tests should be data-driven
     * Either data-drive your tests or access data to assert against, from an external source 
-* You must work with at least 10 different web applications (15 tests/application)
+* You must work with at least 10 different web applications (12 tests/application)
   * You are welcome to automate all the given applications, in order to reduce the number of tests required per 
   application
-* You must test in all 8 available domains (see below for domain list)
-* You must develop at least 10 high-value test cases for ParaBank
+* You must test across all 8 available domains (see below for domain list)
+* You must develop at least 10 high-value E2E test cases for Luma
     * Think about common production scenarios, such as opening an account, paying bills,
     making transfers, viewing transaction history, etc
-* You must develop at least 10 high value test cases for freecrm.com
+* You must develop at least 10 high value E2E test cases for FreeCRM
     * Look at all the functionality this application allows you to do - Log a call, add a new contact, add new companies, 
     scheduling calendar events, etc  
 #

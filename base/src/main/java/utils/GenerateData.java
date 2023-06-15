@@ -57,8 +57,9 @@ public class GenerateData {
 
     }
 
-    public static String[] dateOfBirth() {
-        DateFormat df = new SimpleDateFormat("yyyyMMdd");
+    public static String[] dateOfBirth(String format) {
+        // Sample format = "yyyyMMdd"
+        DateFormat df = new SimpleDateFormat(format);
         Date dob = faker.date().birthday();
         String formattedDob = df.format(dob);
 

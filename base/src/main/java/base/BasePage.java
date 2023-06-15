@@ -4,10 +4,10 @@ import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 import config.BaseConfig;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import listeners.DriverEventListener;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.io.FileHandler;
@@ -30,18 +30,16 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Map;
 import java.util.Set;
-import java.util.function.Function;
 
 public class BasePage {
 
-    Map<Object, String> dbConfig = BaseConfig.databaseConfig();
-    public static final String DATA_PATH = System.getProperty("user.dir") + File.separator + "src" + File.separator
-            + "test" + File.separator + "resources" + File.separator + "test_data.xlsx";
     public static ExcelData excel;
     public static Database db;
     public static WebDriver driver;
+    Map<Object, String> dbConfig = BaseConfig.databaseConfig();
+    public static final String DATA_PATH = System.getProperty("user.dir") + File.separator + "src" + File.separator
+            + "test" + File.separator + "resources" + File.separator + "test_data.xlsx";
     public static WebDriverWait webDriverWait;
-    public static WebDriverWait syncWait;
     public static Wait<WebDriver> fluentWait;
     public static ExtentReports extent;
     public static JavascriptExecutor jsDriver;
@@ -271,7 +269,7 @@ public class BasePage {
         } catch (ElementClickInterceptedException | StaleElementReferenceException e) {
             System.out.println("Unable to click element - trying again with javascript click");
             jsClickOnElement(element);
-        } catch (TimeoutException | ElementNotVisibleException e) {
+        } catch (TimeoutException e) {
             System.out.println("Unable to locate element - trying again with javascript click");
             jsClickOnElement(element);
         }
@@ -291,13 +289,12 @@ public class BasePage {
     // region Helper Methods
     private static void driverInit(String browser) {
         if (browser.equalsIgnoreCase("chrome")) {
-            WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
         } else if (browser.equalsIgnoreCase("firefox")) {
-            WebDriverManager.firefoxdriver().setup();
             driver = new FirefoxDriver();
+        } else if (browser.equalsIgnoreCase("edge")) {
+            driver = new EdgeDriver();
         } else if (browser.equalsIgnoreCase("safari")) {
-            WebDriverManager.safaridriver().setup();
             driver = new SafariDriver();
         }
 

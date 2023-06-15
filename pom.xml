@@ -23,12 +23,12 @@
         <module>com.apartments</module>
         <module>com.streeteasy</module>
         <module>com.ebay</module>
-        <module>com.parabank</module>
+        <module>com.luma</module>
     </modules>
 
     <properties>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
     </properties>
 
     <dependencyManagement>
@@ -37,21 +37,21 @@
             <dependency>
                 <groupId>org.apache.poi</groupId>
                 <artifactId>poi</artifactId>
-                <version>5.0.0</version>
+                <version>5.2.3</version>
             </dependency>
 
             <!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
             <dependency>
                 <groupId>org.apache.poi</groupId>
                 <artifactId>poi-ooxml</artifactId>
-                <version>5.0.0</version>
+                <version>5.2.3</version>
             </dependency>
 
             <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
             <dependency>
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
-                <version>8.0.27</version>
+                <version>8.0.28</version>
             </dependency>
 
             <!-- https://mvnrepository.com/artifact/org.testng/testng -->
@@ -65,14 +65,7 @@
             <dependency>
                 <groupId>org.seleniumhq.selenium</groupId>
                 <artifactId>selenium-java</artifactId>
-                <version>4.1.1</version>
-            </dependency>
-
-            <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
-            <dependency>
-                <groupId>io.github.bonigarcia</groupId>
-                <artifactId>webdrivermanager</artifactId>
-                <version>5.0.3</version>
+                <version>4.9.1</version>
             </dependency>
 
             <!-- https://mvnrepository.com/artifact/com.github.javafaker/javafaker -->
@@ -123,8 +116,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
                 <configuration>
-                    <source>11</source>
-                    <target>11</target>
+                    <source>17</source>
+                    <target>17</target>
                 </configuration>
             </plugin>
 
@@ -140,18 +133,18 @@
                     <testFailureIgnore>true</testFailureIgnore>
 
                     <suiteXmlFiles>
-                        <suiteXmlFile>target/test-classes/ATTTestNGRunner.xml</suiteXmlFile>
-                        <suiteXmlFile>target/test-classes/AutomationPracticeTestNGRunner.xml</suiteXmlFile>
+                        <suiteXmlFile>target/test-classes/ApartmentsTestNGRunner.xml</suiteXmlFile>
                         <suiteXmlFile>target/test-classes/BankOfAmericaTestNGRunner.xml</suiteXmlFile>
                         <suiteXmlFile>target/test-classes/BMWUSATestNGRunner.xml</suiteXmlFile>
                         <suiteXmlFile>target/test-classes/BookingTestNGRunner.xml</suiteXmlFile>
                         <suiteXmlFile>target/test-classes/EbayTestNGRunner.xml</suiteXmlFile>
                         <suiteXmlFile>target/test-classes/ESPNTestNGRunner.xml</suiteXmlFile>
                         <suiteXmlFile>target/test-classes/ExpediaTestNGRunner.xml</suiteXmlFile>
-                        <suiteXmlFile>target/test-classes/MarketWatchTestNGRunner.xml</suiteXmlFile>
+                        <suiteXmlFile>target/test-classes/FreeCRMTestNGRunner.xml</suiteXmlFile>
+                        <suiteXmlFile>target/test-classes/InvestingTestNGRunner.xml</suiteXmlFile>
+                        <suiteXmlFile>target/test-classes/LumaTestNGRunner.xml</suiteXmlFile>
                         <suiteXmlFile>target/test-classes/MBUSATestNGRunner.xml</suiteXmlFile>
-                        <suiteXmlFile>target/test-classes/RedfinTestNGRunner.xml</suiteXmlFile>
-                        <suiteXmlFile>target/test-classes/SoFiTestNGRunner.xml</suiteXmlFile>
+                        <suiteXmlFile>target/test-classes/OptimumTestNGRunner.xml</suiteXmlFile>
                         <suiteXmlFile>target/test-classes/StreetEasyTestNGRunner.xml</suiteXmlFile>
                         <suiteXmlFile>target/test-classes/VerizonTestNGRunner.xml</suiteXmlFile>
                     </suiteXmlFiles>
