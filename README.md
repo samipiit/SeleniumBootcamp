@@ -1,10 +1,10 @@
-# 2022 Winter Weekend | Selenium Bootcamp
+# WEM-130 | Selenium Bootcamp
 
 
 ## SUBMISSION PROCESS:
 
 ### Deadline: 
-* November 19th @ 10AM
+* July 16th, 2023 @ 10AM
 
 ### Instructions 
 * Clone the project locally, in your IdeaProjects directory, or any other desired directory
