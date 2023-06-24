@@ -6,6 +6,7 @@ import com.relevantcodes.extentreports.LogStatus;
 import config.BaseConfig;
 import listeners.DriverEventListener;
 import org.openqa.selenium.*;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -13,11 +14,11 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.events.EventFiringDecorator;
-import org.openqa.selenium.support.events.WebDriverListener;
 import org.openqa.selenium.support.ui.*;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
+import org.testng.annotations.Optional;
 import reporting.ExtentManager;
 import reporting.ExtentTestManager;
 import utils.Database;
@@ -26,10 +27,7 @@ import utils.ExcelData;
 import java.io.File;
 import java.lang.reflect.Method;
 import java.time.Duration;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class BasePage {
 
@@ -302,10 +300,12 @@ public class BasePage {
         fluentWait = new FluentWait<>(driver)
                 .withTimeout(Duration.ofSeconds(20))
                 .pollingEvery(Duration.ofMillis(500))
-                .ignoring(Exception.class);
+                .ignoring(NoSuchElementException.class);
 
-        WebDriverListener listener = new DriverEventListener();
-        driver = new EventFiringDecorator(listener).decorate(driver);
+        // Register Event Listener
+        DriverEventListener listener = new DriverEventListener();
+        EventFiringDecorator<WebDriver> eventDecorator = new EventFiringDecorator<>(listener);
+        driver = eventDecorator.decorate(driver);
 
     }
 
